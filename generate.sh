@@ -1,16 +1,13 @@
 #!/bin/bash
 
 images=(\
-    kube-proxy-amd64:v1.9.0 \
-    kube-scheduler-amd64:v1.9.0 \
-    kube-controller-manager-amd64:v1.9.0 \
-    kube-apiserver-amd64:v1.9.0 \
-    etcd-amd64:3.1.10 pause-amd64:3.0 \
-    kubernetes-dashboard-amd64:v1.8.3 \
-    k8s-dns-sidecar-amd64:1.14.7 \
-    k8s-dns-kube-dns-amd64:1.14.7 \
-    k8s-dns-dnsmasq-nanny-amd64:1.14.7)
-
+  k8s.gcr.io/kube-apiserver:v1.14.1 \
+  k8s.gcr.io/kube-controller-manager:v1.14.1 \
+  k8s.gcr.io/kube-scheduler:v1.14.1 \
+  k8s.gcr.io/kube-proxy:v1.14.1 \
+  k8s.gcr.io/pause:3.1 \
+  k8s.gcr.io/etcd:3.3.10 \
+  k8s.gcr.io/coredns:1.3.1 \
 i=0
 for image in ${images[@]} ; do
   echo "FROM gcr.io/google_containers/$image" > Dockerfile_$i
