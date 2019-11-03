@@ -9,5 +9,6 @@ FROM registry.cn-shanghai.aliyuncs.com/veia/devgo
 RUN go get -u \
 	github.com/aliyun/alibaba-cloud-sdk-go/sdk \
 	github.com/gophercloud/gophercloud \
+	github.com/google/uuid \
 	golang.org/x/crypto/ssh \
 	gopkg.in/ini.v1 2>&1
