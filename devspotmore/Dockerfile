@@ -7,6 +7,7 @@ FROM registry.cn-shanghai.aliyuncs.com/veia/devgo
 
 # Install Go tools 
 RUN go get -u \
+	github.com/satori/go.uuid \
 	github.com/aliyun/alibaba-cloud-sdk-go/sdk \
 	github.com/gophercloud/gophercloud \
         github.com/aws/aws-sdk-go \
