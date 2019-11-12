@@ -4,9 +4,11 @@
 #-------------------------------------------------------------------------------------------------------------
 
 FROM registry.cn-shanghai.aliyuncs.com/veia/devgo
+ENV GO111MODULE=on
 
 # Install Go tools 
 RUN go get -u \
+	k8s.io/client-go \
 	github.com/satori/go.uuid \
 	github.com/aliyun/alibaba-cloud-sdk-go/sdk \
 	github.com/gophercloud/gophercloud \
