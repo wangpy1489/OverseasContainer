@@ -7,7 +7,9 @@ FROM golang:1.13.4
 ENV GO111MODULE=on
 
 # Install Go tools
+
 WORKDIR /kube 
 RUN git clone https://github.com/kubernetes/kubernetes
 WORKDIR /kube/kubernetes
+RUN apt update && apt install -y rsync
 RUN make
