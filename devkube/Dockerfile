@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM registry.cn-shanghai.aliyuncs.com/veia/devgo
+FROM golang:1.13.4
 ENV GO111MODULE=on
 
 # Install Go tools
