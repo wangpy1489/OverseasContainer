@@ -4,4 +4,3 @@ ENV GO111MODULE=on
 RUN go get -u \
     k8s.io/client-go \
     k8s.io/apimachinery \
-    k8s.io/api \
